@@ -30,7 +30,6 @@ export default function Signin() {
         }
 
         const formValues = {
-            name,
             email,
             password,
         };
@@ -134,7 +133,7 @@ export default function Signin() {
                     backgroundColor: '#97FEED',
                 }}
             >
-                <img src="/images/cupcake.gif" alt="animation" style={{ width: isMobile ? '200px' : '300px', height: isMobile ? '200px' : '300px' }} />
+                <img src="https://thumbs.gfycat.com/AmusedFairCollardlizard.webp" alt="animation" style={{ width: isMobile ? '200px' : '300px', height: isMobile ? '200px' : '300px' }} />
             </Box>
         </Box>
     );
