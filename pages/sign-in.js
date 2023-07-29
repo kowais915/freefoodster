@@ -114,7 +114,7 @@ export default function Signin() {
                             Sign In
                         </Button>
                         <Typography variant="body2" color="text.secondary" sx={{ mt: 2 }}>
-                            Don't have an account?{' '}
+                            Do not have an account?{' '}
                             <Link legacyBehavior href="/sign-up">
                                 <a style={{ fontWeight: 'bold', color: '#35A29F', textDecoration: 'none' }}>Sign Up</a>
                             </Link>
