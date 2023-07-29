@@ -5,14 +5,18 @@ import styles from '@/styles/Home.module.css'
 
 // * importing components
 import HomePage from '../components/HomePage'
+import Main from '@/components/Main'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
     <>
-      <h1>The coolest app ever built during a hackathon</h1>
+      
+      <Main/>
+
       <HomePage/>
+    
     </>
   )
 }
