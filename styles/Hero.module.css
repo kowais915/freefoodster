@@ -1,0 +1,19 @@
+.container{
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(161, 199, 195);
+    height: 400px;
+
+}
+
+.text{
+    display: block;
+}
+
+.button{
+    color: white;
+    background-color: #35A29F;
+}
