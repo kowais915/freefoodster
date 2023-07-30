@@ -1,0 +1,26 @@
+.container{
+
+    background-color: rgb(161, 199, 195);;   
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+
+.title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    
+}
+.cards{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+  
+}
+

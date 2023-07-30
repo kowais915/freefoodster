@@ -7,6 +7,7 @@ import styles from '@/styles/Home.module.css'
 import HomePage from '../components/HomePage'
 import Main from '@/components/Main'
 import Layout from '@/components/Layout'
+import {QueryClient, QueryClientProvider} from 'react-query';
 
 
 const inter = Inter({ subsets: ['latin'] })
