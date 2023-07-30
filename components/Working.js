@@ -13,12 +13,14 @@ const Working = () => {
 
                     <Typography
                         variant='h4'
+                        
                     >
                         How It Works
                     </Typography>
                     <div>
                         <Typography
-                            variant='p'
+                           
+                            paragraph={true}
                         >
                             Share a meal in 3 simple steps
                         </Typography>

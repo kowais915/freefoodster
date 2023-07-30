@@ -16,7 +16,7 @@ const Hero = () => {
             
 
             <Typography
-                variant="p"
+                paragraph={true}
 
             >
                 Help Feed the Poor
