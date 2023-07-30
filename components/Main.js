@@ -1,12 +1,11 @@
 import Navbar from "./Navbar";
+import Layout from "./Layout";
 
 const Main = () => {
     return ( 
-        <>
-            <h1>This is the main component</h1>
-            {/* // * place child components here */}
-            <Navbar/>
-        </>
+       <Layout>
+                
+        </Layout>
      );
 }
  
