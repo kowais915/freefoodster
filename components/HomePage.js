@@ -1,3 +1,4 @@
+import Featured from "./Featured";
 import Hero from "./Hero";
 import Working from "./Working";
 
@@ -7,6 +8,7 @@ const HomePage = () => {
         
             <Hero/>
             <Working/>
+            <Featured/>
         </>
       );
 }
