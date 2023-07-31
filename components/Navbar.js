@@ -9,7 +9,7 @@ const Navbar = () => {
 
     }
     return (
-        <nav className="flex flex-row justify-between p-2  items-center bg-gradient-to-r  from-teal-500 to-pink-500 sm:flex-row sm:justify-between md:justify-between">
+        <nav className="flex flex-row justify-between p-2  items-center bg-gradient-to-r  from-teal-500 to-pink-500 sm:flex-row sm:justify-between md:justify-between ">
             <div className="flex flex-row justify-between ">
 
 
@@ -53,7 +53,7 @@ const Navbar = () => {
             </div>
 
             { clicked && 
-             <div className="flex flex-col md:hidden  items-center  flex-col md:flex  sm:flex-row  sm:flex-row md:visible">
+             <div className="flex flex-col md:hidden  items-center  flex-col md:flex  sm:flex-row  sm:flex-row ">
              
                  <div className="card   hover:bg-sky-700 hover:text-white p-3 rounded-md cursor-pointer ">
                      <p>About</p>
