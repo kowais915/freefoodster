@@ -4,12 +4,12 @@ import Footer from "./Footer";
 
 const Layout = ({children}) => {
     return (  
-        <>
+        <div className="text-xs">
         <Navbar/>
             {children}
         <Footer/>
 
-        </>
+        </div>
     );
 }
  

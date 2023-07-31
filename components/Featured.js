@@ -4,6 +4,7 @@ import {useState, useEffect} from 'react'
 import {useQuery } from '@tanstack/react-query';
 import styles from '../styles/Featured.module.css'
 import { Typography } from "@mui/material";
+import NewCard from './NewCard'
 
 
 
@@ -60,7 +61,7 @@ const Featured = () => {
             <div className={styles.cards}>
 
                 <div className="card1">
-                    <MealCard/>
+                    <NewCard/>
                 </div>
 
                 <div className="card1">

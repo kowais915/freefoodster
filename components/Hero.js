@@ -4,7 +4,7 @@ import styles from '../styles/Hero.module.css'
 
 const Hero = () => {
     return (
-       <div className={styles.container}>
+       <div className="bg-teal-500 h-300 flex justify-center flex-col items-center p-40 text-center">
 
             <Typography
                 variant="h3"

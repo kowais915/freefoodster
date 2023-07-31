@@ -1,15 +1,23 @@
 import {styled} from 'styled-components'
-
+import styles from '../styles/Footer.module.css'
+import { Typography } from '@mui/material';
 
 const Footer = () => {
     return ( 
-            <FooterContainer>
+            <footer className={styles.container}>
 
-                <h2>FreeFoodster</h2>
+                <Typography
+
+                    variant='h4'
+                    align='center'
+                >
+                    FreeFoodster
+
+                </Typography>
 
                 
 
-            </FooterContainer>
+            </footer>
      );
 }
 
