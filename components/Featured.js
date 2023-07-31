@@ -60,7 +60,7 @@ const Featured = () => {
             
 
 
-            <div className="flex p-10 flex-col items-center sm:flex-row sm:p-2 sm:justify-center ">
+            <div className="flex p-10 flex-col items-center sm:flex-row sm:p-2 sm:justify-center md:flex-wrap ">
 
             { meals.allMeals &&  meals.allMeals.map((item)=>{
 
