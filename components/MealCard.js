@@ -14,6 +14,7 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
+import Button from '@mui/material/Button'
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -26,10 +27,10 @@ const ExpandMore = styled((props) => {
   }),
 }));
 
-export default function MealCard() {
+export default function MealCard({title, location, people, availible}) {
   const [expanded, setExpanded] = React.useState(false);
 
-  const handleExpandClick = ({title, location, people, availble}) => {
+  const handleExpandClick = () => {
     setExpanded(!expanded);
   };
 
@@ -46,8 +47,8 @@ export default function MealCard() {
             <MoreVertIcon />
           </IconButton>
         }
-        title={"Cool Dish" || {title} }
-        subheader={"Street 17, Manhatten, New York" || {location} }
+        title={title} 
+        subheader={location} 
       />
       <CardMedia
         component="img"
@@ -57,8 +58,23 @@ export default function MealCard() {
       />
       <CardContent>
         <Typography variant="body2" color="text.secondary">
-         { "This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like" || {description}
-         }.
+         {availible ?
+
+          <Button
+            variant='outlined'
+          >
+            Availible
+
+          </Button>
+         : <Button
+         variant='outlined'
+         color='error'
+       >
+         Served
+
+       </Button>
+         
+         }
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
