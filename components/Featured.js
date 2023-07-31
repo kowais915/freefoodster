@@ -42,7 +42,7 @@ const Featured = () => {
 
     console.log("Data: ", data);
     return (
-        <div className="bg-teal-500 p-10 ">
+        <div className="bg-teal-500 p-10 sm:p-9  ">
 
             <div className="text-center">
                 <Typography
@@ -58,17 +58,17 @@ const Featured = () => {
             </div>
 
 
-            <div className="flex flex-col items-center sm:flex-row">
+            <div className="flex p-10 flex-col items-center sm:flex-row sm:p-2 sm:justify-center ">
 
-                <div className="m-5">
+                <div className="m-5 w-80 sm:p-2">
                     <MealCard/>
                 </div>
 
-                <div className="m-5">
+                <div className="m-5 w-80 sm:p-2">
                 <MealCard/>
                 </div>
 
-                <div className="m-5">
+                <div className="m-5 w-80 sm:p-2">
                 <MealCard/>
                 </div>
 
