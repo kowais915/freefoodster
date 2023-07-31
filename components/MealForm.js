@@ -12,6 +12,7 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import {useState, useEffect} from 'react';
 
 function Copyright(props) {
   return (
@@ -31,13 +32,43 @@ function Copyright(props) {
 const defaultTheme = createTheme();
 
 export default function MealForm() {
-  const handleSubmit = (event) => {
+    const [location, setLocation ] = useState('');
+    const [meal, setMeal ] = useState('');
+    const [persons, setPersons] = useState(0);
+    const [available, setAvailabel] = useState(true);
+
+
+    const data = {
+        title: meal,
+        location: location,
+        persons: persons,
+        availible: available
+    }
+
+    
+
+
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
+   
     console.log({
-      email: data.get('email'),
-      password: data.get('password'),
+      
+        meal: meal,
+        capicity: persons,
+        Availibilty: available,
+        location: location
     });
+    const response = await fetch("https://freefoodster-api.up.railway.app/api/meals", {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(data)
+    });
+    const json = await response.json();
+
+    if(response.ok){
+        console.log("Posted...........!!!!!!!");
+    }
   };
 
   return (
@@ -59,16 +90,7 @@ export default function MealForm() {
             Meal Offering Form
           </Typography>
           <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
-            <TextField
-              margin="normal"
-              required
-              fullWidth
-              id="email"
-              label="Email Address"
-              name="email"
-              autoComplete="email"
-              autoFocus
-            />
+           
             <TextField
               margin="normal"
               required
@@ -77,6 +99,7 @@ export default function MealForm() {
               label="Meal"
               type="text"
               id="meal"
+              onChange={(e)=>setMeal(e.target.value)}
               
             />
 
@@ -84,10 +107,24 @@ export default function MealForm() {
               margin="normal"
               required
               fullWidth
-              name="title"
+              name="location"
+              label="Location"
+              type="text"
+              id="meal"
+              placeholder='Where is this meal?'
+              onChange={(e)=>setLocation(e.target.value)}
+              
+            />
+
+            <TextField
+              margin="normal"
+              required
+              fullWidth
+              name="capicity"
               label="Serving Capicity"
               type="number"
-              id="meal"
+              id="capicity"
+              onChange={(e)=>setPersons(e.target.value)}
               
             />
 
@@ -101,6 +138,7 @@ export default function MealForm() {
               placeholder='True or False'
               defaultValue='true'
               id="meal"
+              onChange={(e)=>setAvailabel(e.target.value)}
               
             />
            
