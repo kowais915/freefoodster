@@ -42,9 +42,9 @@ const Featured = () => {
 
     console.log("Data: ", data);
     return (
-        <div className={styles.container}>
+        <div className="bg-teal-500 p-10 ">
 
-            <div className={styles.title}>
+            <div className="text-center">
                 <Typography
                     variant="h4"
                 >
@@ -58,17 +58,17 @@ const Featured = () => {
             </div>
 
 
-            <div className={styles.cards}>
+            <div className="flex flex-col items-center sm:flex-row">
 
-                <div className="card1">
-                    <NewCard/>
+                <div className="m-5">
+                    <MealCard/>
                 </div>
 
-                <div className="card1">
+                <div className="m-5">
                 <MealCard/>
                 </div>
 
-                <div className="card1">
+                <div className="m-5">
                 <MealCard/>
                 </div>
 
