@@ -7,12 +7,13 @@ import { Typography } from '@mui/material';
 
 const Working = () => {
     return ( 
-        <div className={styles.container}>
+        <div className='flex p-35 m-10 text-center flex-col sm:flex-row sm:justify-around'>
 
             <div className={styles.left}>
 
                     <Typography
                         variant='h4'
+                        className=' '
                         
                     >
                         How It Works
@@ -21,6 +22,8 @@ const Working = () => {
                         <Typography
                            
                             paragraph={true}
+                            className=''
+
                         >
                             Share a meal in 3 simple steps
                         </Typography>
@@ -28,7 +31,7 @@ const Working = () => {
             </div>
 
             
-            <div className={styles.cards}>
+            <div className='flex flex-col items-center '>
                 <div className={styles.card}>
 
                     <WorkingCard
