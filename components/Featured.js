@@ -12,7 +12,7 @@ import NewCard from './NewCard'
 
 
 const Featured = () => {
-    const [data, setData] = useState([])
+    const [meals, setMeals] = useState([])
 
     // useEffect(()=>{
     //     const getData = async ()=>{
@@ -31,7 +31,7 @@ const Featured = () => {
         queryFn: async function(){
             const response = await fetch("https://freefoodster-api.up.railway.app/api/meals/all");
             const data = await response.json();
-            setData(data);
+            setMeals(data);
             return data;
 
             
@@ -40,7 +40,7 @@ const Featured = () => {
         
     })
 
-    console.log("Data: ", data);
+    console.log("Data: ", meals);
     return (
         <div className="bg-teal-500 p-10 sm:p-9  ">
 
@@ -57,20 +57,32 @@ const Featured = () => {
                 </div>
             </div>
 
+            
+
 
             <div className="flex p-10 flex-col items-center sm:flex-row sm:p-2 sm:justify-center ">
 
-                <div className="m-5 w-80 sm:p-2">
-                    <MealCard/>
-                </div>
+            { meals.allMeals &&  meals.allMeals.map((item)=>{
 
-                <div className="m-5 w-80 sm:p-2">
-                <MealCard/>
+                return(
+                <div key={item.id} className="m-5 w-80 sm:p-2">
+                    <MealCard
+                        title={item.title}
+                        location={item.location}
+                        persons={item.persons}
+                        availible={item.availible}
+                    />
                 </div>
+                )
+            })
 
-                <div className="m-5 w-80 sm:p-2">
-                <MealCard/>
-                </div>
+
+
+            }
+        
+
+
+                
 
             </div>
         </div>
