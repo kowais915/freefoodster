@@ -1,5 +1,6 @@
 import Featured from "./Featured";
 import Hero from "./Hero";
+import MealForm from "./MealForm";
 import Working from "./Working";
 
 const HomePage = () => {
@@ -9,6 +10,7 @@ const HomePage = () => {
             <Hero/>
             <Working/>
             <Featured/>
+            <MealForm/>
         </>
       );
 }

@@ -5,6 +5,7 @@ import {useQuery } from '@tanstack/react-query';
 import styles from '../styles/Featured.module.css'
 import { Typography } from "@mui/material";
 import NewCard from './NewCard'
+import MealForm from "./MealForm";
 
 
 
@@ -85,6 +86,8 @@ const Featured = () => {
                 
 
             </div>
+
+            
         </div>
       );
 }
