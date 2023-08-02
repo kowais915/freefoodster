@@ -69,6 +69,11 @@ export default function MealForm() {
     if(response.ok){
         console.log("Posted...........!!!!!!!");
     }
+    setLocation('');
+    setMeal('');
+    setPersons(0);
+    setAvailabel(false)
+    
   };
 
   return (
